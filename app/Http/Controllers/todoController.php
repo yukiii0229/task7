@@ -9,13 +9,7 @@ class todoController extends Controller
 {
     public function todo()
     {
-        $items = todo::all();
-        return view('todo', ['items' => $todo]);
-        $data = [
-            'todo'=>$content,
-        ];
-        return view('todo', $data);
-        
+       return view('todo); 
     }
     public function create(Request $request)
     {
