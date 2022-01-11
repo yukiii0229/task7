@@ -12,4 +12,11 @@ class todoController extends Controller
         $items = todo::all();
         return view('todo', ['items' => $items]);
     }
+    public function create(Request $request)
+    {
+        $this->validate($request, Author::$rules);
+        $form = $request->all();
+        todo::create($form);
+        return redirect('/');
+    }
 }
