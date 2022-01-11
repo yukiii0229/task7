@@ -1,22 +1,18 @@
-<?php
+ <h1>todo list</h1>
+     <input type="text" name="create"><button>追加</button>
 
-namespace App\Http\Controllers;
-
-use App\Models\todo;
-use Illuminate\Http\Request;
-
-class todoController extends Controller
-{
-    public function todo()
-    {
-        return view('todo');
-    }
-    public function create(Request $request)
-    {
-        $this->validate($request, todo::$rules);
-        $form = $request->all();
-        todo::create($form);
-        return redirect('/');
-    }
-}
+  <table>
+  <tr>
+   <td>作成日</td>
+   <td>タスク名</td>
+   <td>更新</td>
+   <td>削除</td>
+ </tr>
+ <tr>
+   <td></td>
+   <td></td>
+   <td></td>
+   <td></td>
+ </tr>
+</table>
 
