@@ -5,17 +5,17 @@ namespace App\Http\Controllers;
 use App\Models\todo;
 use Illuminate\Http\Request;
 
-
 class todoController extends Controller
 {
     public function todo()
     {
         $items = todo::all();
-        return view('todo', ['items' => $items]);
+        return view('todo', ['items' => $todo]);
         $data = [
-            'item'=>$todo,
+            'todo'=>$content,
         ];
         return view('todo', $data);
+        
     }
     public function create(Request $request)
     {
@@ -25,3 +25,4 @@ class todoController extends Controller
         return redirect('/');
     }
 }
+
