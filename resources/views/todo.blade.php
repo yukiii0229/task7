@@ -26,8 +26,8 @@
    <td>削除</td>
  </tr>
  <tr>
-   <td></td>
-   <td></td>
+   <td> {{$item->created_at()}}</td>
+   <td>{{$item->content()}}</td>
    <td></td>
    <td></td>
  </tr>
